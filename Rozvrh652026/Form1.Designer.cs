@@ -35,18 +35,18 @@ partial class Form1
         // 
         // btnNacist
         // 
-        btnNacist.Location = new System.Drawing.Point(287, 49);
+        btnNacist.Location = new System.Drawing.Point(319, 25);
         btnNacist.Name = "btnNacist";
-        btnNacist.Size = new System.Drawing.Size(214, 82);
+        btnNacist.Size = new System.Drawing.Size(153, 50);
         btnNacist.TabIndex = 0;
-        btnNacist.Text = "Načíst rozvrh ";
+        btnNacist.Text = "Načíst body";
         btnNacist.UseVisualStyleBackColor = true;
         btnNacist.Click += btnNacist_Click;
         // 
         // lblVysledek
         // 
         lblVysledek.AutoSize = true;
-        lblVysledek.Location = new System.Drawing.Point(94, 176);
+        lblVysledek.Location = new System.Drawing.Point(350, 221);
         lblVysledek.Name = "lblVysledek";
         lblVysledek.Size = new System.Drawing.Size(53, 15);
         lblVysledek.TabIndex = 1;
@@ -60,6 +60,7 @@ partial class Form1
         Controls.Add(lblVysledek);
         Controls.Add(btnNacist);
         Text = "Form1";
+        Click += btnNacist_Click;
         ResumeLayout(false);
         PerformLayout();
     }

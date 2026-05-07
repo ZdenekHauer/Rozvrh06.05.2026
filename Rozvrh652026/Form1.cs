@@ -7,6 +7,8 @@ using System.Windows.Forms;
 
 namespace Rozvrh652026;
 
+
+
 public partial class Form1 : Form
 {
     public Form1()
@@ -19,17 +21,17 @@ public partial class Form1 : Form
     {
         using HttpClient client = new HttpClient();
 
-        string url = "https://rozvrh.adamhojer.cz/2A/today/subjects?group=A1"; 
+        string url = "https://rozvrh.adamhojer.cz/2A/wednesday/subjects?group=A1"; 
 
         var json = await client.GetStringAsync(url);
 
-        var subjects = JsonSerializer.Deserialize<List<Subject>>(json);
+        var subjects = JsonSerializer.Deserialize<List<string>>(json);
 
         int body = 0; 
         
         foreach (var s in subjects)
         {
-            switch (s.name)
+            switch (s.ToUpper())
             {
                 case "AAP": body += 3; break;
                 case "PSI": body += 1; break;
